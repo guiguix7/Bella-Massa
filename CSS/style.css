@@ -3,16 +3,30 @@ html {
 }
 
 body {
-    background-color: #FAF7F3;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .carrossel {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     overflow: hidden;
+    margin: 30px auto;
+    border-radius: 15px;
     position: relative;
-    margin: 20px auto;
-    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 15px 30px;
+    width: 100%;
 }
 
 .slides {
@@ -36,47 +50,51 @@ body {
     border-radius: 10px;
 }
 
-#slide1:checked ~ .first {
+#slide1:checked~.first {
     margin-left: 0;
 }
 
-#slide2:checked ~ .first {
+#slide2:checked~.first {
     margin-left: -100%;
 }
 
-#slide3:checked ~ .first {
+#slide3:checked~.first {
     margin-left: -200%;
 }
 
 .navigation-manual {
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .manual-btn {
-    border: 2px solid #fff;
-    padding: 5px;
+    border: 2px solid white;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
-    margin: 0 5px;
+    transition: background 0.3s;
 }
 
 .manual-btn:hover {
-    background: #fff;
+    background: white;
 }
 
 header {
     background-color: #8A0000;
     color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    position: relative;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -103,8 +121,7 @@ header ul li a {
 }
 
 main {
-    padding: 20px;
-    width: 100%;
+    padding: 15px 30px;
     background-color: #F0E4D3;
 }
 
@@ -123,9 +140,9 @@ footer {
     background-color: #8A0000;
     color: white;
     text-align: center;
-    padding: 20px;
-    width: 100%;
+    padding: 15px 30px;
     position: relative;
+    width: 100%;
 }
 
 footer p {
@@ -135,15 +152,26 @@ footer p {
 }
 
 nav ul li a {
-    border: 2px solid transparent;
-    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
+    border: 2px solid transparent;
 }
 
 nav ul li a:hover {
     background-color: #C83F12;
-    border-color: white;
+    border-color: #ffff
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .menu {
@@ -198,13 +226,12 @@ nav ul li a:hover {
 .imagem-logo {
     display: flex;
     align-items: center;
-    gap: 400px;
+    gap: 15px;
 }
 
 .imagem-logo img {
-    height: 80px;
-    width: auto;
-    border-radius: 10px;
+    height: 60px;
+    border-radius: 8px;
 }
 
 .imagem-logo h1 {

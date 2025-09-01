@@ -1,5 +1,4 @@
 body {
-   
     margin: 0;
     padding: 0;
     background-color: #FAF7F3;
@@ -9,12 +8,37 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background-color: #8A0000; 
+.imagem-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imagem-logo img {
+    height: 60px;
+    border-radius: 8px;
+}
+
+.imagem-logo h1 {
+    font-size: 2.5em;
+    margin: 0;
     color: white;
-    padding: 20px;
-    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #8A0000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -44,7 +68,7 @@ header ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 15px 30px;
     background-color: #F0E4D3;
 }
 
@@ -87,10 +111,9 @@ footer {
     background-color: #8A0000;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px 30px;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 
 footer p {

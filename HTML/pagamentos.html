@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamentos - Pizzaria Bella Massa</title>
     <meta name="author" content="Gui">
-    <meta name="description" content="Pagina de Pagamento.">
+    <meta name="description" content="Pagina de Pagamento">
     <link rel="icon" href="../ASSETS/IMG/Antigas/Logo da Pizzaria Bell Massa (2).png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/style_pagamentos.css">
     <script defer src="../SCRIPT/script_pagamentos.js"></script>
@@ -92,7 +92,7 @@
                             <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
                         </div>
                     </div>
-                    <br>
+                    <br><br>
                     <h3>Entrega ou Retirada</h3>
                     <div class="botoes-pagamento">
                         <div class="forma-pagamento">
@@ -108,23 +108,23 @@
                     <div class="grid duas-colunas">
                         <div class="campo col-span-2">
                             <label for="endereco">Endereço</label>
-                            <input type="text" id="endereco" name="endereco" placeholder="Rua e complemento">
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua e complemento" required>
                         </div>
                         <div class="campo">
                             <label for="numero">Número</label>
-                            <input type="text" id="numero" name="numero" placeholder="Nº" inputmode="numeric">
+                            <input type="text" id="numero" name="numero" placeholder="Nº" inputmode="numeric" required>
                         </div>
                         <div class="campo">
                             <label for="bairro">Bairro</label>
-                            <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+                            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
                         </div>
                         <div class="campo">
                             <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+                            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
                         </div>
                         <div class="campo">
                             <label for="cep">CEP</label>
-                            <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric">
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" required>
                         </div>
                     </div>
                     <div class="campo">
@@ -155,23 +155,23 @@
                         <div class="campo">
                             <label for="numero-cartao">Número do cartão</label>
                             <input type="text" id="numero-cartao" name="numero-cartao" placeholder="0000 0000 0000 0000"
-                                inputmode="numeric" autocomplete="cc-number">
+                                inputmode="numeric" required>
                         </div>
                         <div class="campo">
                             <label for="nome-cartao">Nome impresso</label>
                             <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Como está no cartão"
-                                autocomplete="cc-name">
+                                required>
                         </div>
                         <div class="grid duas-colunas">
                             <div class="campo">
                                 <label for="validade">Validade</label>
                                 <input type="text" id="validade" name="validade" placeholder="MM/AA" inputmode="numeric"
-                                    autocomplete="cc-exp">
+                                    required>
                             </div>
                             <div class="campo">
                                 <label for="cvv">CVV</label>
                                 <input type="password" id="cvv" name="cvv" placeholder="***" inputmode="numeric"
-                                    autocomplete="cc-csc">
+                                    required>
                             </div>
                         </div>
                     </div>

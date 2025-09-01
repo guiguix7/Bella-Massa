@@ -1,4 +1,4 @@
-apresentação 
+Apresentação 
 
 Bem-vindo ao repositório do site da Pizzaria Bella Massa!
 Este projeto foi desenvolvido para oferecer uma plataforma simples, intuitiva e responsiva, onde os clientes podem conhecer nosso cardápio, fazer pedidos online, entrar em contato e localizar nossa unidade com facilidade.

@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Pizzaria Bella Massa</title>
+    <title>Pagamentos - Pizzaria Bella Massa</title>
     <meta name="author" content="Gui">
-    <meta name="keywords" content="Pizza, Venda, Bella Massa">
-    <meta name="description" content="Conheça mais sobre a Pizzaria Bella Massa!">
+    <meta name="description" content="Pagina de Pagamento">
     <link rel="icon" href="../ASSETS/IMG/Antigas/Logo da Pizzaria Bell Massa (2).png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/style_sobrenos.css">
+    <link rel="stylesheet" href="../CSS/style_pagamentos.css">
+    <script defer src="../SCRIPT/script_pagamentos.js"></script>
 </head>
 
 <body>
@@ -36,69 +36,168 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="texto">
-            <section>
-                <h2>Sobre Nós</h2>
-                <p>Bem-vindo à <strong>Bella Massa</strong>, onde a paixão pela pizza se transforma em sabor e tradição!
-                </p>
-                <p>Desde nossa fundação, nos dedicamos a oferecer pizzas de alta qualidade, feitas com ingredientes
-                    frescos
-                    e selecionados. Nossa missão é proporcionar momentos inesquecíveis para você e sua família.</p>
-            </section>
-            <section>
-                <h3>O Que Nos Torna Especiais</h3>
-                <ul>
-                    <li>Massa artesanal preparada diariamente.</li>
-                    <li>Molho caseiro com receita exclusiva.</li>
-                    <li>Ingredientes frescos e de alta qualidade.</li>
-                    <li>Atendimento acolhedor e ambiente familiar.</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Nosso Compromisso</h3>
-                <p>Na Pizzaria Bella Massa, acreditamos que cada pizza deve ser uma experiência única. Trabalhamos com
-                    dedicação para garantir que cada cliente saia satisfeito e com vontade de voltar.</p>
-            </section>
-            <section class="historia">
-                <h3>Nossa História</h3>
-                <p>Bem-vindo à Bella Massa, onde a paixão pela pizza se transforma em sabor e tradição!</p>
+        <h2>Finalizar Pedido</h2>
+        <form id="form-pagamento">
+            <div class="pagamento">
+                <section class="card">
+                    <div class="resumo-pedido">
+                        <h3>Resumo do Pedido</h3>
+                        <ul>
+                            <li>
+                                <p>Pizza Calabresa (Grande)</p>
+                                <p>1 un</p>
+                            </li>
+                            <li>
+                                <p>Pizza Margherita (Média)</p>
+                                <p>1 un</p>
+                            </li>
+                            <li>
+                                <p>Refrigerante 350ml</p>
+                                <p>2 un</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <div class="linha">
+                            <p>Subtotal</p>
+                            <p>R$ —</p>
+                        </div>
+                        <div class="linha">
+                            <p>Taxa de Entrega</p>
+                            <p>R$ —</p>
+                        </div>
+                        <div class="linha">
+                            <p><strong>Total</strong></p>
+                            <p><strong>R$ —</strong></p>
+                        </div>
+                    </div>
+                </section>
 
-                <p>A Bella Massa nasceu do sonho de trazer para nossa cidade a verdadeira pizza artesanal, feita com
-                    ingredientes frescos e receitas que respeitam a tradição italiana.
-                    Nosso nome reflete exatamente a isso, uma massa bela, leve e saborosa, preparada com cuidado e
-                    dedicação
-                    para garantir uma experiência inesquecível a cada mordida.</p>
+                <section class="card">
+                    <h3>Seus Dados</h3>
+                    <div class="grid duas-colunas">
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" required>
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h3>Entrega ou Retirada</h3>
+                    <div class="botoes-pagamento">
+                        <div class="forma-pagamento">
+                            <input type="radio" name="modalidade" id="opt-entrega" checked>
+                            <label for="opt-entrega">Entrega</label>
+                        </div>
+                        <div class="forma-pagamento">
+                            <input type="radio" name="modalidade" id="opt-retirada">
+                            <label for="opt-retirada">Retirada</label>
+                        </div>
+                    </div>
 
-                <p>Aqui, cada pizza é feita diariamente, com massa fresca preparada na hora e molhos feitos com os
-                    melhores
-                    ingredientes. Valorizamos a qualidade acima de tudo e
-                    acreditamos que o segredo de uma ótima pizza está no equilíbrio perfeito entre sabor, textura e
-                    carinho
-                    no preparo.</p>
+                    <div class="grid duas-colunas">
+                        <div class="campo col-span-2">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua e complemento" required>
+                        </div>
+                        <div class="campo">
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" name="numero" placeholder="Nº" inputmode="numeric" required>
+                        </div>
+                        <div class="campo">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" required>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="obs">Observações para entrega</label>
+                        <textarea id="obs" name="obs" rows="2"
+                            placeholder="Ex.: Interfone quebrado, portão marrom..."></textarea>
+                    </div>
+                </section>
 
-                <p>Mais do que uma pizzaria, a Bella Massa é um ponto de encontro para famílias, amigos e amantes de
-                    boas
-                    pizzas. Nosso objetivo é proporcionar momentos de alegria e união, sempre com aquela pizza quentinha
-                    que
-                    todo mundo adora.
-                    Venha nos visitar e descubra por que a Bella Massa é a escolha certa para quem busca sabor, tradição
-                    e
-                    um atendimento acolhedor. Esperamos por você!</p>
-            </section>
-        </div>
+                <section class="card pagamento-forma">
+                    <h3>Forma de Pagamento</h3>
+                    <div class="botoes-pagamento">
+                        <div class="forma-pagamento">
+                            <input type="radio" name="pagto" id="pagto-cartao" value="cartao" checked>
+                            <label for="pagto-cartao">Cartão</label>
+                        </div>
+                        <div class="forma-pagamento">
+                            <input type="radio" name="pagto" id="pagto-pix" value="pix">
+                            <label for="pagto-pix">PIX</label>
+                        </div>
+                        <div class="forma-pagamento">
+                            <input type="radio" name="pagto" id="pagto-dinheiro" value="dinheiro">
+                            <label for="pagto-dinheiro">Dinheiro</label>
+                        </div>
+                    </div>
+
+                    <div class="sessao-pagamento" id="sessao-cartao">
+                        <div class="campo">
+                            <label for="numero-cartao">Número do cartão</label>
+                            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="0000 0000 0000 0000"
+                                inputmode="numeric" required>
+                        </div>
+                        <div class="campo">
+                            <label for="nome-cartao">Nome impresso</label>
+                            <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Como está no cartão"
+                                required>
+                        </div>
+                        <div class="grid duas-colunas">
+                            <div class="campo">
+                                <label for="validade">Validade</label>
+                                <input type="text" id="validade" name="validade" placeholder="MM/AA" inputmode="numeric"
+                                    required>
+                            </div>
+                            <div class="campo">
+                                <label for="cvv">CVV</label>
+                                <input type="password" id="cvv" name="cvv" placeholder="***" inputmode="numeric"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="pix">Chave PIX</label>
+                        <input type="text" id="pix" name="pix" placeholder="Digite sua chave PIX">
+                    </div>
+                </section>
+
+                <section class="card-imagem">
+                    <div class="imagem">
+                        <img src="../ASSETS/IMG/Antigas/Obrigado pela preferençia (1).png"
+                            alt="Obrigado pela preferência">
+                    </div>
+                </section>
+            </div>
+            <button class="btn-enviar" type="submit">Finalizar Pedido</button>
+        </form>
     </main>
+
     <footer>
-        <div class="texto-footer">
-            <nav>
-                <ul>
-                    <li><a href="contato.html">Entre em contato</a></li>
-                </ul>
-            </nav>
-            <p> - </p>
-            <h4>&copy; 2025 Pizzaria Bella Massa. Todos os direitos reservados.</h4>
-        </div>
+        <p>&copy; 2025 Pizzaria Bella Massa. Todos os direitos reservados.</p>
     </footer>
+    <script src="../SCRIPT/script_pagamentos.js"></script>
 </body>
+
 
 </html>

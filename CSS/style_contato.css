@@ -1,11 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FAF7F3;
-}
-
-html{
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFDF0;
 }
 
 .imagem-logo {
@@ -31,7 +27,6 @@ html{
 header {
     background-color: #8A0000;
     color: white;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
@@ -73,12 +68,13 @@ main {
 }
 
 main h3 {
-    color: #8A0000; 
+    color: #8A0000;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-main input, main textarea {
+main input,
+main textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -87,13 +83,14 @@ main input, main textarea {
     font-size: 1em;
 }
 
-main input:focus, main textarea:focus {
-    border-color: #8A0000; 
+main input:focus,
+main textarea:focus {
+    border-color: #8A0000;
     outline: none;
 }
 
 main button {
-    background-color: #8A0000; 
+    background-color: #8A0000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -129,7 +126,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #C83F12; 
+    background-color: #C83F12;
     border-color: white;
 }
 
@@ -150,7 +147,7 @@ nav ul li a:hover {
     padding: 12px 16px;
 }
 
-.dropdown > a {
+.dropdown>a {
     position: relative;
     padding-right: 24px;
 }
@@ -180,4 +177,15 @@ nav ul li a:hover {
 
 .dropdown:hover .submenu {
     display: block;
+}
+
+.texto {
+    text-align: center;
+    text-justify: inter-word;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: left;
 }

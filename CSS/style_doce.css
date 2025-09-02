@@ -1,27 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FAF7F3;
-}
-
-.imagem-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.imagem-logo img {
-    height: 60px;
-    border-radius: 8px;
-}
-
-.imagem-logo h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    justify-content: center;
+    background-color: #FFFDF0;
 }
 
 header {
@@ -37,9 +17,25 @@ header {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.imagem-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imagem-logo img {
+    height: 60px;
+    border-radius: 8px;
+}
+
+.imagem-logo h1,
 header h1 {
-    margin: 0;
     font-size: 2.5em;
+    margin: 0;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    justify-content: center;
 }
 
 header ul {
@@ -57,16 +53,75 @@ header ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    background-color: #C83F12;
+    border-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+nav ul li a {
     border: 2px solid transparent;
     padding: 5px 10px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-header ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
     background-color: #C83F12;
     border-color: white;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    display: block;
+    padding: 12px 16px;
+}
+
+.dropdown>a {
+    position: relative;
+    padding-right: 24px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8A0000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    border-radius: 0 0 8px 8px;
+}
+
+.submenu li a {
+    padding: 12px 16px;
+    color: white;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #C83F12;
+}
+
+.dropdown:hover .submenu {
+    display: block;
 }
 
 main {
@@ -153,7 +208,7 @@ button {
     align-self: center;
     text-align: center;
     margin-top: 20px;
-    
+
 }
 
 .submit-btn:hover {
@@ -218,7 +273,7 @@ footer p {
     padding: 12px 16px;
 }
 
-.dropdown > a {
+.dropdown>a {
     position: relative;
     padding-right: 24px;
 }
